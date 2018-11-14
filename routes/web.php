@@ -15,7 +15,11 @@ Route::get('/', function () {
     //return view('welcome');
     //$posts=\App\Post::find(1);
 	//dd($posts);
-	\App\Post::destroy(2);
+	//\App\Post::destroy(2);
+	$allPosts = \App\Post::all();
+	dd($allPosts);
+	$featuredPosts = \App\Post::where('is_feature',1)->get();
+	dd($featuredPosts);
 });
 /*
 \App\Post::create([
