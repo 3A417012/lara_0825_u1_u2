@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    $posts=\App\Post::find(1);
+	dd($posts);
 });
 /*
 \App\Post::create([
@@ -20,8 +22,9 @@ Route::get('/', function () {
 	'content' => 'test content'
 ]);
 */
-
+/*
 $post = new \App\Post();
 $post->title = 'test title';
 $post->content = 'test content';
 $post->save();
+*/
