@@ -13,8 +13,9 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    $posts=\App\Post::find(1);
-	dd($posts);
+    //$posts=\App\Post::find(1);
+	//dd($posts);
+	\App\Post::destroy(2);
 });
 /*
 \App\Post::create([
